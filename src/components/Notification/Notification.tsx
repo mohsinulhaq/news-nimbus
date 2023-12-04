@@ -20,7 +20,7 @@ export const Notification = memo(() => {
       onClose={handleClose}
       anchorOrigin={{
         horizontal: 'right',
-        vertical: 'top',
+        vertical: 'bottom',
       }}
       sx={{minWidth: 300, maxWidth: 300}}
     >
