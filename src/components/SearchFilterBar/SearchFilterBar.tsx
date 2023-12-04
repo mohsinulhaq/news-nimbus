@@ -75,6 +75,7 @@ export const SearchFilterBar = memo(
             gap={1}
           >
             <DatePicker
+              withPortal
               placeholderText="From"
               value={fromDate?.toString()}
               onChange={(date: Date) => setFromDate(formatDate(date))}
@@ -83,12 +84,14 @@ export const SearchFilterBar = memo(
                   sx={{
                     width: {
                       xs: 100,
+                      sm: '100%',
                     },
                   }}
                 />
               }
             />
             <DatePicker
+              withPortal
               placeholderText="To"
               value={toDate?.toString()}
               onChange={(date: Date) => setToDate(formatDate(date))}
@@ -97,6 +100,7 @@ export const SearchFilterBar = memo(
                   sx={{
                     width: {
                       xs: 100,
+                      sm: '100%',
                     },
                   }}
                 />
