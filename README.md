@@ -1,30 +1,23 @@
-# React + TypeScript + Vite
+# News Nimbus
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+News aggregator created using [React](https://react.dev), [Redux Toolkit](https://redux-toolkit.js.org), [RTK Query](https://redux-toolkit.js.org/rtk-query/overview), [Joy UI](https://mui.com/joy-ui/getting-started). The app was scaffolded for development using [Vite](https://vitejs.dev) and it uses [Storybook](https://storybook.js.org) for component development.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Data Sources
 
-## Expanding the ESLint configuration
+- [NewsAPI](https://newsapi.org/docs/endpoints/everything)
+- [NY Times API](https://developer.nytimes.com/docs/articlesearch-product/1/routes/articlesearch.json/get)
+- [The Guardian API](https://open-platform.theguardian.com/documentation/search)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Docker
 
-- Configure the top-level `parserOptions` property like this:
+- The app is containerized using [Docker](https://www.docker.com). The image is located at `mohsinulhaq/news-nimbus:latest` on [Docker Hub](https://hub.docker.com/r/mohsinulhaq/news-nimbus).
+- To run the app using Docker, run the following command:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```bash
+docker pull mohsinulhaq/news-nimbus:latest
+docker run -p 3000:3000 mohsinulhaq/news-nimbus:latest
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- Now open [http://localhost:3000](http://localhost:3000) to view it in the browser.
