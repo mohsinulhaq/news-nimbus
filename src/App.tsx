@@ -106,7 +106,12 @@ export function App() {
         <ThemeToggleButton />
       </Stack>
       <Stack
-        paddingX={2}
+        paddingX={{
+          xs: 2,
+          sm: 4,
+          md: 8,
+          lg: 16,
+        }}
         gap={2}
       >
         <SearchFilterBar
