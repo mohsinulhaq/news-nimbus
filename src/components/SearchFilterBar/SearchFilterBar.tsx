@@ -36,7 +36,7 @@ export const SearchFilterBar = memo(
     onSourceChange,
   }: SearchFilterBarProps) => {
     return (
-      <Stack gap={1}>
+      <Stack gap={2}>
         <Input
           onKeyDown={(event) => {
             if (event.key === 'Enter') {
@@ -51,35 +51,6 @@ export const SearchFilterBar = memo(
           justifyContent="space-between"
           gap={2}
         >
-          <Stack
-            direction="row"
-            gap={1}
-          >
-            <DatePicker
-              placeholderText="From"
-              value={fromDate?.toString()}
-              onChange={(date: Date) => setFromDate(formatDate(date))}
-              customInput={
-                <Input
-                  sx={{
-                    width: {sm: 150},
-                  }}
-                />
-              }
-            />
-            <DatePicker
-              placeholderText="To"
-              value={toDate?.toString()}
-              onChange={(date: Date) => setToDate(formatDate(date))}
-              customInput={
-                <Input
-                  sx={{
-                    width: {sm: 150},
-                  }}
-                />
-              }
-            />
-          </Stack>
           <Autocomplete
             multiple
             placeholder="Authors"
@@ -98,6 +69,40 @@ export const SearchFilterBar = memo(
               onSourceChange(value);
             }}
           />
+          <Stack
+            direction="row"
+            justifyContent="space-between"
+            gap={1}
+          >
+            <DatePicker
+              placeholderText="From"
+              value={fromDate?.toString()}
+              onChange={(date: Date) => setFromDate(formatDate(date))}
+              customInput={
+                <Input
+                  sx={{
+                    width: {
+                      xs: 100,
+                    },
+                  }}
+                />
+              }
+            />
+            <DatePicker
+              placeholderText="To"
+              value={toDate?.toString()}
+              onChange={(date: Date) => setToDate(formatDate(date))}
+              customInput={
+                <Input
+                  sx={{
+                    width: {
+                      xs: 100,
+                    },
+                  }}
+                />
+              }
+            />
+          </Stack>
         </Stack>
       </Stack>
     );
