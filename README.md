@@ -21,3 +21,11 @@ docker run -p 3000:3000 mohsinulhaq/news-nimbus:latest
 ```
 
 - Now open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+## Local Development
+
+- Make sure you are at least on Node 16.14 (`node -v`)
+- Install dependencies: `pnpm install` (or `npm install` or `yarn install`)
+- Run the app in the development mode: `pnpm dev` (or `npm run dev` or `yarn dev`)
+- Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- The page will automatically reflect the changes when you make any edits to the project files.
