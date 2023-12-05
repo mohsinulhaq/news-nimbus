@@ -3,6 +3,7 @@ import {createRoot} from 'react-dom/client';
 import {Provider as ReduxProvider} from 'react-redux';
 import {CssVarsProvider} from '@mui/joy/styles';
 import CssBaseline from '@mui/joy/CssBaseline';
+import {Analytics} from '@vercel/analytics/react';
 
 import {store} from './store.ts';
 import {App} from './App.tsx';
@@ -17,5 +18,6 @@ createRoot(document.getElementById('root')!).render(
         <Notification />
       </CssVarsProvider>
     </ReduxProvider>
+    <Analytics />
   </StrictMode>
 );

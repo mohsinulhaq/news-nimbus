@@ -18,6 +18,7 @@
     "@mui/icons-material": "^5.14.19",
     "@mui/joy": "5.0.0-beta.16",
     "@reduxjs/toolkit": "^1.9.7",
+    "@vercel/analytics": "^1.1.1",
     "react": "^18.2.0",
     "react-datepicker": "^4.24.0",
     "react-dom": "^18.2.0",
